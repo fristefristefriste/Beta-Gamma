@@ -21,13 +21,15 @@ class BadInputException(Exception):
 
 def parse_func(s: str) -> (int, int, List[str], List[str]):
     """
-    f:R^4->R^2; f(x,y,z,w)=(x-y,x+z)
+    This is literally the worst thing I've ever written in my entire career,
+    it's supposed to be temporary until I have some sort of GUI and way to force
+    user inputs to be fixed
     """
     lst = s.split('; ')
     lst[0] = lst[0][2:]
     f = lst[1].split('=')
     domain = int(lst[0][2])
-    codomain = int(lst[0][7])  # garbage
+    codomain = int(lst[0][7])
     sig = f[0][2:-1].split(',')
     expr = f[1][1:-1].split(',')
     return domain, codomain, sig, expr
@@ -35,6 +37,7 @@ def parse_func(s: str) -> (int, int, List[str], List[str]):
 
 def parse_basis(s: str) -> List[List[Any]]:
     """
+    this doesn't work, same reason as parse_func
     >>> parse_basis('[1,0],[0,1]')
     [[1, 0], [0, 1]]
     """
@@ -54,7 +57,7 @@ def convert_to_python(s: str) -> list:
     """
     converts s to math expression in python syntax
     ASSUMES ALL ALPHABETICAL CHARACTERS ARE VARIABLES.
-    ONLY CONVERTS IF LEGIT MATH EXPRESSION
+    ONLY CONVERT IF LEGIT MATH EXPRESSION
     >>> convert_to_python('7x+8z')
     ['7', '*', 'x', '+', '8', '*', 'z']
     >>> convert_to_python('xy')
@@ -87,7 +90,7 @@ def evaluate(ex: list, vector: list, sig: list) -> Any:
     # scaling
     # addition
     # subtraction
-    return eval(expr)  # A little bit questionable
+    return eval(expr)  # Needs to be replaced
 
 
 def verify_linear(t: str) -> bool:
@@ -97,12 +100,6 @@ def verify_linear(t: str) -> bool:
         return False
     a, b = match.span()
     return b - a == len(t)
-
-
-def verify_basis(b):
-    """Checks that set is a basis."""
-
-    pass
 
 
 def convert_to_matrix(sig: List[str], t: List[str], beta, gamma):
