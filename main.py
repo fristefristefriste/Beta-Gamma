@@ -6,7 +6,7 @@ import doctest
 
 
 """
-Limited to real or vector-valued transformations. :[
+
 """
 
 DOMAIN = 0
@@ -152,5 +152,5 @@ if __name__ == '__main__':
     if b2.lower() == 'standard':
         b2 = generate_standard(t1[CODOMAIN])
     # convert_to_matrix(t1[SIG], t1[EXPR], [[1,0,0],[0,1,0],[0,0,1]], [[1,0,0],[0,1,0],[0,0,1]])
-    convert_to_matrix(t1[SIG], t1[EXPR], b1, b2)
+    convert_to_matrix(t1[SIG], t1[EXPR], b1, b2)  # Technically works with any basis but I need a way to turn string reps of lists into python lists
 
