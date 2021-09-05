@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Beta-Gamma</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body style="background-color:rgba(23, 24, 26, 1)">
+<div class="container d-flex justify-content-center">
+    <h1 class="display-1 mb-1 mt-5 text-lowercase text-light">Beta-Gamma</h1>
+</div>
+<div class="container d-flex justify-content-center">
+    <h2 class="mb-4 text-lowercase text-light">A matrix representation calculator</h2>
+</div>
+<div class="container w-50">
+<div class="container">
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="domain">
+        <input type="text" class="form-control mb-2" placeholder="basis 1">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="codomain">
+         <input type="text" class="form-control mb-2" placeholder="basis 2">
+    </div>
+  </div>
+
+</div>
+    <div class="row">
+
+        <div class="col-xs-2">
+            <div class="input-group">
+            <div class="input-group-prepend">
+    <span class="input-group-text">T(</span>
+  </div>
+            <input type="text" class="form-control w-50" id="basic-addon3" placeholder="x, y, z..."/>
+            <div class="input-group-append">
+    <span class="input-group-text" >)</span>
+  </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">(</span>
+                </div>
+            <input type="text" class="form-control" placeholder="x-y, y+2z, 9z..." aria-label="Linear transformation" aria-describedby="basic-addon2"/>
+        <div class="input-group-append">
+      <span class="input-group-text">)</span>
+  </div>
+            </div>
+            </div>
+
+        <div class="input-group-append">
+    <button class="btn btn-light" type="button">go</button>
+  </div>
+    </div>
+</div>
+
+</body>
+</html>
